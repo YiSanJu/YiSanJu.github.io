@@ -72,7 +72,8 @@ layout: default
                 postlist-container
             ">
                 {{ content }}
-                <div>本站总访问量<span id="busuanzi_value_site_pv">0</span>次</div>
+                <div><strong>拒绝焦虑,给人生留点白</strong></div>
+                <!-- <div>本站总访问量<span id="busuanzi_value_site_pv">0</span>次</div> -->
             </div>
             
             
@@ -88,7 +89,7 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">FEATURED TAGS</a></h5>
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">特色标签</a></h5>
                     <div class="tags">
                         {% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
@@ -103,7 +104,7 @@ layout: default
 
                 <!-- Short About -->
                 <section class="visible-md visible-lg">
-                    <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
+                    <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">关于</a></h5>
                     <div class="short-about">
                         {% if site.sidebar-avatar %}
                             <a href="{{ site.baseurl }}/about">
