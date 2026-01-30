@@ -1,9 +1,9 @@
 # Site settings
-title: SanJu
-SEOTitle: 三句的信使 | SanJu
-header-img: img/title.jpg
+title: SanJu   #你博客的标题
+SEOTitle: 三句的信使 | SanJu #显示在浏览器上搜索的时候显示的标题
+header-img: static/img/main.jpg #显示在首页的背景图片
 email: 1307022894@qq.com
-description: "A blog for Sanju."
+description: "A blog for Sanju." #网站介绍
 keyword: "SanJu,blog,个人记录"
 url: "https://YiSanJu.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -12,12 +12,12 @@ github_repo: "https://github.com/YiSanJu/YiSanJu.github.io" # you code repositor
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "我的个人记录"
-sidebar-avatar: /img/nav.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /static/img/nav.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # SNS settings
-RSS: false
+RSS: false #展示社交平台，目前只展示github
 # weibo_username:     awang
 # zhihu_username:     awang
 github_username: YiSanJu
@@ -31,70 +31,86 @@ github_username: YiSanJu
 
 
 # Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# 使用rouge作为代码高亮工具,因为从2016年起GitHub Pages不再支持pygments
+permalink: pretty  # 生成优雅的URL
+paginate: 10      # 每页显示的文章数量
+exclude: ["static/less","node_modules","Gruntfile.js","package.json","package-lock.json","README.md","codecov.yml","LICENSE","scripts"]  # 构建时排除的文件
+anchorjs: true    # 是否启用锚点功能,可在post.html的181行自定义
 
 
 
 # Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+# 支持本地预览 Jekyll 3.0
+plugins: [jekyll-paginate]  # gems 已弃用，改用 plugins
 
-
-
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-highlighter: rouge
+# Markdown 设置
+markdown: kramdown  # 使用 kramdown 作为 markdown 解析器
+highlighter: rouge  # 代码高亮工具
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
-
+  input: GFM  # 使用 GitHub Flavored Markdown
+  syntax_highlighter: rouge  # 指定代码高亮工具
+  syntax_highlighter_opts:  # 高亮选项
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false  # 关闭行号，避免显示问题
+      start_line: 1
 
 # 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: awang
-
-# Gitalk
+# Gitalk 配置
 gitalk:
-  enable: false    #是否开启Gitalk评论
-  clientID: 15ba47af24ac403a9475                            #生成的clientID
-  clientSecret: 44e99e239e307115485b9da5f035b3268d6772d1    #生成的clientSecret
-  repo: awang0608.github.io    #仓库名称
-  owner: awang0608    #github用户名
-  admin: awang0608
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+  enable: true  # 是否启用 Gitalk
+  clientID: 'Ov23liiMDRLuETjKyCjG'  # 你的 GitHub Application Client ID
+  clientSecret: 'c7a769c9d46f386f4c833155fd7ba5d0e8cfbd74'  # 你的 GitHub Application Client Secret
+  repo: 'YiSanJu.github.io'  # 仓库名称
+  owner: 'YiSanJu'  # GitHub 用户名
+  admin: ['YiSanJu']  # GitHub 管理员用户名
+  distractionFreeMode: true  # 是否启用无干扰模式
+  language: 'zh-CN'  # 设置语言
+  labels: ['Gitalk', 'blog-comment']  # 评论标签，用于在 GitHub Issues 中分类管理
+  pagerDirection: 'last'  # 评论排序方向：last(最新在前) 或 first(最旧在前)
+  createIssueManually: false  # 自动为每篇文章创建 Issue，推荐设置为 false
+  proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'  # 解决跨域问题的代理服务器
+  perPage: 10  # 每页显示的评论数量
+  maxCommentHeight: 250  # 评论框最大高度（像素）
+
+# 网站统计
+# 百度统计（可选，主要用于中国大陆用户分析）
+# ba_track_id: ''
+
+# Google Analytics（推荐使用 GA4）
+ga_track_id: 'G-RGY6X6BWD3'  # 您的 GA4 测量ID
+ga_domain: 'YiSanJu.github.io'  # 您的网站域名
+# 可选配置
+ga_anonymize_ip: true  # 匿名化IP地址，符合隐私保护要求
+ga_respect_dnt: true   # 尊重用户的"请勿跟踪"设置
+
+# 标签设置
+featured-tags: true  # 是否启用标签
+featured-condition-size: 2  # 标签展示阈值
+
+# PWA 设置
+chrome-tab-theme-color: "#000000"  # Chrome 标签主题色
+service-worker: true  # 是否启用 Service Worker
+
+# 随机背景图片
+random-header-bg: true  # 是否启用随机背景图片（使用 Picsum 在线图片）
+
+# Personal 页面开关
+personal_page: true  # 是否显示 Personal 页面（个人生活记录）
 
 
-# 统计
 
-# Analytics settings
-# Baidu Analytics
-# ba_track_id: 0070d40a1f6efbc05ae10a9a3729a23b
+# 推荐标签设置
+featured_tags:
+  enabled: true                     # 是否启用首页标签
+  condition_size: 2                 # 标签出现的最小文章数量
 
-# Google Analytics
-# ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-# ga_domain: auto                         # 默认的是 auto, 可填写自定义域名
-
-
-
-
-
-# Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
-
-
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
+# 渐进式网页应用 (PWA) 设置
+pwa:
+  chrome_tab_theme_color: "#000000" # Chrome 标签主题色
+  service_worker: true               # 是否启用服务工作器
 
 
 

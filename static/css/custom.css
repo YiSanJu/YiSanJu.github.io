@@ -1,0 +1,126 @@
+/**
+ * 自定义样式修复
+ */
+
+/* 代码块整体容器样式 */
+.highlighter-rouge {
+  margin: 20px 0;
+}
+
+.highlighter-rouge .highlight {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* 代码块 pre 样式 */
+.highlight pre.highlight,
+.highlighter-rouge pre.highlight {
+  margin: 0;
+  padding: 15px 20px;
+  background-color: #282c34;
+  border-radius: 6px;
+  border: none;
+  overflow-x: auto;
+}
+
+.highlight pre.highlight code,
+.highlighter-rouge pre.highlight code {
+  display: block;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #abb2bf;
+  white-space: pre;
+  word-wrap: normal;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* 代码高亮颜色 - One Dark 主题 */
+.highlight .c1, .highlight .c, .highlight .cm { color: #5c6370; font-style: italic; }  /* 注释 */
+.highlight .k, .highlight .kd, .highlight .kn { color: #c678dd; }  /* 关键字 */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .dl { color: #98c379; }  /* 字符串 */
+.highlight .nc, .highlight .nf { color: #61afef; }  /* 类名/函数名 */
+.highlight .nx { color: #e06c75; }  /* 变量/标识符 */
+.highlight .nb { color: #e5c07b; }  /* 内置对象 */
+.highlight .m, .highlight .mi, .highlight .mf { color: #d19a66; }  /* 数字 */
+.highlight .o, .highlight .p { color: #abb2bf; }  /* 操作符/标点 */
+.highlight .nl { color: #61afef; }  /* CSS 属性名 */
+.highlight .nt { color: #e06c75; }  /* HTML 标签 */
+.highlight .na { color: #d19a66; }  /* HTML 属性 */
+
+/* 任务列表样式 */
+ul.task-list {
+  list-style: none !important;
+  padding-left: 24px;
+}
+
+ul.task-list .task-list-item {
+  list-style: none !important;
+  margin-bottom: 8px;
+}
+
+.task-list-item-checkbox {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  cursor: default;
+}
+
+/* 表格样式优化 */
+.post-container table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.post-container table th,
+.post-container table td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.post-container table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.post-container table tr:hover {
+  background-color: #fafafa;
+}
+
+/* 图片样式 */
+.post-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 引用块样式 */
+.post-container blockquote {
+  border-left: 4px solid #0085a1;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  color: #666;
+}
+
+.post-container blockquote p {
+  margin: 0;
+}
+
+/* 行内代码样式 */
+.post-container code.language-plaintext {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #c7254e;
+  font-size: 0.9em;
+}

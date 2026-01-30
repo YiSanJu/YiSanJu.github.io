@@ -1,0 +1,280 @@
+---
+layout: page
+title: "About Me"
+description: "Hey, this is Sanju."
+header-img: "static/img/about.jpg"
+permalink: /about/
+---
+
+<style>
+.about-section {
+  margin-bottom: 40px;
+}
+.about-section h2 {
+  color: #333;
+  border-bottom: 2px solid #0085a1;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  background: #e0e0e0;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed #eee;
+}
+.timeline-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0085a1;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #0085a1;
+}
+.timeline-date {
+  color: #0085a1;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.timeline-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+.timeline-company {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.timeline-desc {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.timeline-desc ul {
+  margin: 10px 0 0 0;
+  padding-left: 20px;
+}
+.timeline-desc li {
+  margin-bottom: 5px;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+.skill-tag {
+  background: #f0f7ff;
+  color: #0066cc;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid #cce0ff;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+.contact-list li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-list a {
+  color: #0085a1;
+  text-decoration: none;
+}
+.contact-list a:hover {
+  text-decoration: underline;
+}
+.intro-quote {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.intro-quote blockquote {
+  border: none;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-weight: 500;
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.intro-quote p {
+  margin-top: 15px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.95);
+}
+</style>
+
+<!-- 个人介绍 -->
+<div class="intro-quote">
+    <blockquote>Write code, build products, create value.</blockquote>
+    <p>专注前端/AI技术，追求极致用户体验</p>
+</div>
+
+<div class="zh post-container">
+    
+    <!-- 关于我 -->
+    <div class="about-section">
+        <h2>👋 关于我</h2>
+        <p>你好，我是 <strong>SanJu</strong>，一名专注于 Web 前端领域的软件工程师，目前就职于腾讯，负责腾讯文档 Slide 模块的研发工作。</p>
+        <p>拥有 4 年以上前端开发经验，熟悉 Vue、React 等主流框架，对前端工程化、性能优化、复杂交互场景有深入理解与实践。善于将业务需求转化为高质量的技术方案，注重代码可维护性与团队协作效率。</p>
+        <p>本博客用于沉淀技术思考、记录解决方案，同时也作为个人成长的复盘载体。如有技术交流或合作意向，欢迎联系。</p>
+    </div>
+
+    <!-- 工作履历 -->
+    <div class="about-section">
+        <h2>💼 工作履历</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2023.06 - 至今</div>
+                <div class="timeline-title">高级前端开发工程师</div>
+                <div class="timeline-company">腾讯科技（深圳）有限公司</div>
+                <div class="timeline-desc">
+                    <ul>
+                        <li>负责腾讯文档 Slide 模块的前端开发与维护</li>
+                        <li>参与核心功能的架构设计与性能优化</li>
+                        <li>推动团队工程化建设，提升开发效率</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2021.07 - 2023.05</div>
+                <div class="timeline-title">前端开发工程师</div>
+                <div class="timeline-company">某互联网公司</div>
+                <div class="timeline-desc">
+                    <ul>
+                        <li>负责公司核心产品的前端开发</li>
+                        <li>参与移动端 H5 页面开发与优化</li>
+                        <li>协助制定前端开发规范</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 技术栈 -->
+    <div class="about-section">
+        <h2>🛠 技术栈</h2>
+        <div class="skill-tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Webpack</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">Canvas</span>
+            <span class="skill-tag">Git</span>
+        </div>
+    </div>
+
+    <!-- 教育背景 -->
+    <div class="about-section">
+        <h2>🎓 教育背景</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2017.09 - 2021.06</div>
+                <div class="timeline-title">计算机科学与技术</div>
+                <div class="timeline-company">本科</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="about-section">
+        <h2>📮 联系我</h2>
+        <ul class="contact-list">
+            <li>📧 Email: <a href="mailto:1307022894@qq.com">1307022894@qq.com</a></li>
+            <li>🐙 GitHub: <a href="https://github.com/YiSanJu" target="_blank">github.com/YiSanJu</a></li>
+        </ul>
+    </div>
+
+    <!-- 关于本站 -->
+    <div class="about-section">
+        <h2>📝 关于本站</h2>
+        <p>本站基于 <a href="https://pages.github.com/">GitHub Pages</a> 与 <a href="http://jekyll.com.cn/">Jekyll</a> 搭建。</p>
+        <p>主要是为了适配github pages，方便分享我的技术成长和学习笔记。</p>
+        <p>初衷是记录自己的成长，总结经验，希望也能帮助到你。</p>
+    </div>
+
+</div>
+
+<!-- Gitalk 评论 start  -->
+{% if site.gitalk.enable %}
+<!-- Gitalk link  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+    <script type="text/javascript">
+        var gitalk = new Gitalk({
+            clientID: '{{site.gitalk.clientID}}',
+            clientSecret: '{{site.gitalk.clientSecret}}',
+            repo: '{{site.gitalk.repo}}',
+            owner: '{{site.gitalk.owner}}',
+            admin: ['{{site.gitalk.admin}}'],
+            distractionFreeMode: '{{site.gitalk.distractionFreeMode}}',
+            id: 'about',
+        });
+        gitalk.render('gitalk-container');
+</script>
+{% endif %}
+<!-- Gitalk end -->
+
+ <!-- disqus 评论框 start  -->
+{% if site.disqus.enable %}
+
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus.username}}";
+    var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}

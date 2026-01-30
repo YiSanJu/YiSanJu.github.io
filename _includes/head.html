@@ -13,21 +13,24 @@
     <link rel="manifest" href="{{ site.baseurl }}/pwa/manifest.json">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/static/img/favicon.ico">
 
-    <link rel="apple-touch-icon" href="{{ site.baseurl }}/img/awang.jpg">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/static/img/awang.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/static/css/bootstrap.min.css" | prepend: site.baseurl }}">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/hux-blog.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/static/css/hux-blog.min.css" | prepend: site.baseurl }}">
 
     <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/static/css/syntax.css" | prepend: site.baseurl }}">
+
+    <!-- Custom CSS Fix -->
+    <link rel="stylesheet" href="{{ "/static/css/custom.css" | prepend: site.baseurl }}">
 
     <!-- Custom Fonts -->
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
@@ -52,4 +55,15 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
+
+    <!-- MathJax 数学公式支持 -->
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>

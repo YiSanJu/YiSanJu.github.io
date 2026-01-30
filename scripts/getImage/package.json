@@ -1,0 +1,14 @@
+{
+  "name": "get-images",
+  "version": "1.0.0",
+  "description": "下载高质量图片用于博客",
+  "main": "getImages.js",
+  "scripts": {
+    "start": "node getImages.js",
+    "get10": "node getImages.js --count=10",
+    "get20": "node getImages.js --count=20",
+    "nature": "node getImages.js --query=nature --count=5",
+    "tech": "node getImages.js --query=technology --count=5",
+    "minimal": "node getImages.js --query=minimal --count=5"
+  }
+}

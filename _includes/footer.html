@@ -14,6 +14,11 @@
                         </a>
                     </li>
                     {% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
                     {% if site.jianshu_username %}
                             <li>
                                 <a target="_blank" href="https://www.jianshu.com/u/{{ site.jianshu_username }}" title="简书">
@@ -24,6 +29,11 @@
                                 </a>
                             </li>
                     {% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
                     {% if site.twitter_username %}
                     <li>
                         <a href="https://twitter.com/{{ site.twitter_username }}" title="twitter">
@@ -35,6 +45,11 @@
                     </li>
                     {% endif %}
 
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
+
                     {% if site.zhihu_username %}
                     <li>
                         <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}" title="知乎">
@@ -45,6 +60,11 @@
                         </a>
                     </li>
                     {% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
                     {% if site.weibo_username %}
                     <li>
                         <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}" title="微博">
@@ -55,6 +75,11 @@
                         </a>
                     </li>
                     {% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
 
 
                     {% if site.facebook_username %}
@@ -67,6 +92,11 @@
                         </a>
                     </li>
                     {% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
                     {% if site.github_username %}
                     <li>
                         <a target="_blank" href="https://github.com/{{ site.github_username }}" title="github">
@@ -77,6 +107,11 @@
                         </a>
                     </li>
                     {% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
                     {% if site.linkedin_username %}
                     <li>
                         <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="linkedin">
@@ -87,6 +122,11 @@
                         </a>
                     </li>
                     {% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
                     {% if site.cnblog_username %}
                     <li>
                         <a target="_blank" href="https://www.cnblogs.com/{{ site.cnblog_username }}" title="博客园">
@@ -97,6 +137,11 @@
                         </a>
                     </li>
                     {% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
                     {% if site.juejin_username %}
                         <li>
                             <a target="_blank" href="https://juejin.im/user/{{ site.juejin_username }}" title="掘金">
@@ -107,6 +152,11 @@
                             </a>
                         </li>
                     {% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
                 </ul>   
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
@@ -124,13 +174,13 @@
 </footer>
 
 <!-- jQuery -->
-<script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/static/js/jquery.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/static/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="{{ "/js/hux-blog.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/static/js/hux-blog.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Service Worker -->
 {% if site.service-worker %}
@@ -143,6 +193,11 @@
             .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
     }
 </script>
+{% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
 {% endif %}
 
 
@@ -182,7 +237,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async('{{ "/js/jquery.tagcloud.js" | prepend: site.baseurl }}',function(){
+        async('{{ "/static/js/jquery.tagcloud.js" | prepend: site.baseurl }}',function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -201,22 +256,77 @@
 </script>
 
 
-<!-- Google Analytics -->
+<!-- Google Analytics (GA4) -->
 {% if site.ga_track_id %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_track_id }}"></script>
 <script>
-    // dynamic User by Hux
-    var _gaId = '{{ site.ga_track_id }}';
-    var _gaDomain = '{{ site.ga_domain }}';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // 基础配置
+    gtag('config', '{{ site.ga_track_id }}', {
+        // 隐私保护设置
+        {% if site.ga_anonymize_ip %}anonymize_ip: true,{% endif %}
 
-    // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
+        {% if site.ga_respect_dnt %}respect_dnt: true,{% endif %}
 
-    ga('create', _gaId, _gaDomain);
-    ga('send', 'pageview');
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
+        // 自定义配置
+        send_page_view: true,
+        // 增强的电子商务跟踪（可选）
+        custom_map: {
+            'custom_parameter': 'blog_category'
+        }
+    });
+    
+    // 自定义事件跟踪（用于技术博客分析）
+    // 文章阅读时间跟踪
+    function trackReadingTime() {
+        let startTime = Date.now();
+        window.addEventListener('beforeunload', function() {
+            let readingTime = Math.round((Date.now() - startTime) / 1000);
+            gtag('event', 'reading_time', {
+                'event_category': 'engagement',
+                'event_label': document.title,
+                'value': readingTime
+            });
+        });
+    }
+    
+    // 代码复制跟踪
+    function trackCodeCopy() {
+        document.addEventListener('copy', function() {
+            gtag('event', 'code_copy', {
+                'event_category': 'engagement',
+                'event_label': document.title
+            });
+        });
+    }
+    
+    // 初始化自定义跟踪
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            trackReadingTime();
+            trackCodeCopy();
+        });
+    } else {
+        trackReadingTime();
+        trackCodeCopy();
+    }
 </script>
+{% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
 {% endif %}
 
 
@@ -235,6 +345,11 @@
       s.parentNode.insertBefore(hm, s);
     })();
 </script>
+{% endif %}
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
 {% endif %}
 
 
@@ -268,7 +383,7 @@
      * Doc: https://github.com/davist11/jQuery-One-Page-Nav
      * Fork by Hux to support padding
      */
-    async("{{ '/js/jquery.nav.js' | prepend: site.baseurl }}", function () {
+    async("{{ '/static/js/jquery.nav.js' | prepend: site.baseurl }}", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
             changeHash: !1,
@@ -286,8 +401,14 @@
 </script>
 {% endif %}
 
-<script src="{{ "/js/sweetHeart.js " | prepend: site.baseurl }}"></script>
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}
 
+<script src="{{ "/static/js/sweetHeart.js " | prepend: site.baseurl }}"></script>
+
+<!-- 打赏功能（需要配置自己的支付二维码）
 <script src="//static.tctip.com/tctip-1.0.0.min.js"></script>
 <script>
     new tctip({
@@ -299,18 +420,17 @@
         list: [
         {
             type: 'alipay',
-        qrImg: '//awang0608.github.io/img/zhifb.png'
+            qrImg: '/static/img/alipay.png'  // 替换为你的支付宝收款码
         }, {
-        type: 'wechat',
-        qrImg: '//awang0608.github.io/img/wechat.png'
-        }, {
-        type: 'zfb体验金',
-        qrImg: '//awang0608.github.io/img/zfb1.png',
-        icon: '//awang0608.github.io/img/zfb1-icon.png',
-        name: "支付宝体验金"
+            type: 'wechat',
+            qrImg: '/static/img/wechat-pay.png'  // 替换为你的微信收款码
         }
         ],
         stat: false
     }).init()
 </script>
+-->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- 随机背景图片 -->
+<script src="{{ "/static/js/randomBg.js" | prepend: site.baseurl }}"></script>

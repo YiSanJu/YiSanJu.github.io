@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Image to hack wechat -->
-<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/static/img/icon_wechat.png" width="0" height="0"> -->
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
 
 <!-- Post Header -->
@@ -22,7 +22,7 @@ layout: default
     }
     {% endif %}
 </style>
-<header class="intro-header" >
+<header class="intro-header" data-random-bg="{% if page.random-bg == false %}false{% else %}{{ site.random-header-bg }}{% endif %}">
     <div class="header-mask"></div>
     <div class="container">
         <div class="row">
@@ -43,7 +43,7 @@ layout: default
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
                     <span style="font-size: 14px;">
                         <span id="busuanzi_container_page_pv">
-                            共<span id="busuanzi_value_page_pv">0</span>次阅读
+                            <!-- 共<span id="busuanzi_value_page_pv">0</span>次阅读 -->
                         </span>
                     </span>
                 </div>
@@ -68,7 +68,7 @@ layout: default
                 <p>予人玫瑰，手有余香！如果本博的某篇文章帮助了你，并且让你觉得想要放到自己的博客上，欢迎转载，转载请注明出处。</p>
                 <!-- <p>为能够给自己带来价值的东西付费，是再正常不过的事情，物质支持<strong>【右侧打赏】</strong>和精神支持<strong>【评论、转载】</strong>都是我持续总结，持续分享的最大动力！</p>
                 <p>有兴趣的朋友可以关注我的公众号：非梧不栖oy，微信可直接搜索关注或是下方扫码关注，公众号会同步本站的部分博客，您可以直接在手机上随时阅读到自己感兴趣的文章</p>
-                <img src="/img/official-ccount.png" alt=""> -->
+                <img src="/static/img/official-ccount.png" alt=""> -->
                 <hr style="visibility: hidden;">
 
                 <ul class="pager">

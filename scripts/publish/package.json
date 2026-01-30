@@ -1,0 +1,16 @@
+{
+  "name": "publish",
+  "version": "1.0.0",
+  "description": "将 `_drafts` 中的草稿发布到 `_posts`，自动处理文章中的图片和文档。",
+  "main": "publish.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mammoth": "^1.11.0",
+    "pdf-parse": "^1.1.1"
+  }
+}

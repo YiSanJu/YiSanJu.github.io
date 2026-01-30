@@ -1,0 +1,167 @@
+{
+  "static/img/picture-posts/posts-skins/a.jpg": [
+    {
+      "file": "_posts/2022-02-05-宇视停车公众号开发总结.md",
+      "line": 7,
+      "context": "header-img: static/img/picture-posts/posts-skins/a.jpg"
+    }
+  ],
+  "static/img/picture-posts/posts-skins/b.jpg": [
+    {
+      "file": "_posts/2022-10-10-结构体传参方案预研分析.md",
+      "line": 7,
+      "context": "header-img: static/img/picture-posts/posts-skins/b.jpg"
+    }
+  ],
+  "static/img/picture-posts/posts-skins/c.jpg": [
+    {
+      "file": "_posts/2022-10-11-免控件学习.md",
+      "line": 7,
+      "context": "header-img: static/img/picture-posts/posts-skins/c.jpg"
+    }
+  ],
+  "static/img/picture-posts/posts-skins/d.jpg": [
+    {
+      "file": "_posts/2022-12-12-停车场项目需求分析.md",
+      "line": 7,
+      "context": "header-img: static/img/picture-posts/posts-skins/d.jpg"
+    }
+  ],
+  "static/img/picture-posts/posts-skins/e.jpg": [
+    {
+      "file": "_posts/2023-06-06-云存储订阅.md",
+      "line": 7,
+      "context": "header-img: static/img/picture-posts/posts-skins/e.jpg"
+    }
+  ],
+  "static/img/picture-posts/posts-skins/f.jpg": [
+    {
+      "file": "_posts/2023-06-19-主题色方案分析.md",
+      "line": 7,
+      "context": "header-img: static/img/picture-posts/posts-skins/f.jpg"
+    }
+  ],
+  "static/img/picture-posts/posts-skins/g.jpg": [
+    {
+      "file": "_posts/2024-03-01-UNeed组件库项目总结.md",
+      "line": 7,
+      "context": "header-img: static/img/picture-posts/posts-skins/g.jpg"
+    }
+  ],
+  "static/img/tag-bg.jpg": [
+    {
+      "file": "_drafts/2019-11-09-利用 GitHub Pages 快速搭建个人博客.md",
+      "line": 7,
+      "context": "header-img: static/img/tag-bg.jpg"
+    },
+    {
+      "file": "_drafts/2019-11-13-前端问题集锦（持续更新...）.md",
+      "line": 7,
+      "context": "header-img: static/img/tag-bg.jpg"
+    },
+    {
+      "file": "_drafts/2019-11-18-前端杂记（持续更新...）.md",
+      "line": 7,
+      "context": "header-img: static/img/tag-bg.jpg"
+    },
+    {
+      "file": "_drafts/2019-11-18-我看过的前端面试题.md",
+      "line": 7,
+      "context": "header-img: static/img/tag-bg.jpg"
+    }
+  ],
+  "static/img/2019-11-21/wechat-pay.jpg": [
+    {
+      "file": "_drafts/2019-11-21-做微信支付，前端需要干什么.md",
+      "line": 7,
+      "context": "header-img: static/img/2019-11-21/wechat-pay.jpg"
+    }
+  ],
+  "static/img/201912/a.png": [
+    {
+      "file": "_drafts/2019-12-04-html中的a标签详解.md",
+      "line": 7,
+      "context": "header-img: static/img/201912/a.png"
+    }
+  ],
+  "static/img/201912/white-space.png": [
+    {
+      "file": "_drafts/2019-12-20-关于换行以及换行属性.md",
+      "line": 7,
+      "context": "header-img: static/img/201912/white-space.png"
+    }
+  ],
+  "static/img/202001/mine-sweeping-bg.jpg": [
+    {
+      "file": "_drafts/2020-01-19-阿望教你用vue写扫雷（超详细哦）.md",
+      "line": 7,
+      "context": "header-img: static/img/202001/mine-sweeping-bg.jpg"
+    }
+  ],
+  "/static/img/a.jpg": [
+    {
+      "file": "_layouts/default.html",
+      "line": 17,
+      "context": "<img src=\"/static/img/a.jpg\" width=\"0\" height=\"0\" />"
+    }
+  ],
+  "/static/img/icon_wechat.png": [
+    {
+      "file": "_layouts/keynote.html",
+      "line": 6,
+      "context": "<!-- <img src=\"/static/img/icon_wechat.png\" width=\"0\" height=\"0\"> -->"
+    },
+    {
+      "file": "_layouts/post.html",
+      "line": 6,
+      "context": "<!-- <img src=\"/static/img/icon_wechat.png\" width=\"0\" height=\"0\"> -->"
+    }
+  ],
+  "/static/img/official-ccount.png": [
+    {
+      "file": "_layouts/post.html",
+      "line": 71,
+      "context": "<img src=\"/static/img/official-ccount.png\" alt=\"\"> -->"
+    }
+  ],
+  "static/img/main.jpg #显示在首页的背景图片": [
+    {
+      "file": "_config.yml",
+      "line": 4,
+      "context": "header-img: static/img/main.jpg #显示在首页的背景图片"
+    }
+  ],
+  "/static/img/nav.jpg      # use absolute URL, seeing it": [
+    {
+      "file": "_config.yml",
+      "line": 15,
+      "context": "sidebar-avatar: /static/img/nav.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`"
+    }
+  ],
+  "static/img/404-bg.jpg": [
+    {
+      "file": "pages/404.html",
+      "line": 4,
+      "context": "header-img: \"static/img/404-bg.jpg\""
+    },
+    {
+      "file": "pages/offline.html",
+      "line": 4,
+      "context": "header-img: \"static/img/404-bg.jpg\""
+    }
+  ],
+  "static/img/about.jpg": [
+    {
+      "file": "pages/about.html",
+      "line": 5,
+      "context": "header-img: \"static/img/about.jpg\""
+    }
+  ],
+  "static/img/tag.jpg": [
+    {
+      "file": "pages/tags.html",
+      "line": 5,
+      "context": "header-img: \"static/img/tag.jpg\""
+    }
+  ]
+}
