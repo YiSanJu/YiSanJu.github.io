@@ -71,7 +71,7 @@ gitalk:
   labels: ['Gitalk', 'blog-comment']  # 评论标签，用于在 GitHub Issues 中分类管理
   pagerDirection: 'last'  # 评论排序方向：last(最新在前) 或 first(最旧在前)
   createIssueManually: false  # 自动为每篇文章创建 Issue，推荐设置为 false
-  proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'  # 解决跨域问题的代理服务器
+  # proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'  # 代理服务器（如遇到跨域问题可启用）
   perPage: 10  # 每页显示的评论数量
   maxCommentHeight: 250  # 评论框最大高度（像素）
 
