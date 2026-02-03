@@ -15,10 +15,6 @@
                     </li>
                     {% endif %}
 
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
                     {% if site.jianshu_username %}
                             <li>
                                 <a target="_blank" href="https://www.jianshu.com/u/{{ site.jianshu_username }}" title="简书">
@@ -30,10 +26,6 @@
                             </li>
                     {% endif %}
 
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
                     {% if site.twitter_username %}
                     <li>
                         <a href="https://twitter.com/{{ site.twitter_username }}" title="twitter">
@@ -44,11 +36,6 @@
                         </a>
                     </li>
                     {% endif %}
-
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
 
                     {% if site.zhihu_username %}
                     <li>
@@ -61,10 +48,6 @@
                     </li>
                     {% endif %}
 
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
                     {% if site.weibo_username %}
                     <li>
                         <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}" title="微博">
@@ -75,12 +58,6 @@
                         </a>
                     </li>
                     {% endif %}
-
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
-
 
                     {% if site.facebook_username %}
                     <li>
@@ -93,10 +70,6 @@
                     </li>
                     {% endif %}
 
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
                     {% if site.github_username %}
                     <li>
                         <a target="_blank" href="https://github.com/{{ site.github_username }}" title="github">
@@ -108,10 +81,6 @@
                     </li>
                     {% endif %}
 
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
                     {% if site.linkedin_username %}
                     <li>
                         <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="linkedin">
@@ -123,10 +92,6 @@
                     </li>
                     {% endif %}
 
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
                     {% if site.cnblog_username %}
                     <li>
                         <a target="_blank" href="https://www.cnblogs.com/{{ site.cnblog_username }}" title="博客园">
@@ -138,10 +103,6 @@
                     </li>
                     {% endif %}
 
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
                     {% if site.juejin_username %}
                         <li>
                             <a target="_blank" href="https://juejin.im/user/{{ site.juejin_username }}" title="掘金">
@@ -152,11 +113,6 @@
                             </a>
                         </li>
                     {% endif %}
-
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
                 </ul>   
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
@@ -194,12 +150,6 @@
     }
 </script>
 {% endif %}
-
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
-
 
 <!-- async load function -->
 <script>
@@ -268,17 +218,7 @@
     gtag('config', '{{ site.ga_track_id }}', {
         // 隐私保护设置
         {% if site.ga_anonymize_ip %}anonymize_ip: true,{% endif %}
-
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
         {% if site.ga_respect_dnt %}respect_dnt: true,{% endif %}
-
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
-{% endif %}
         // 自定义配置
         send_page_view: true,
         // 增强的电子商务跟踪（可选）
@@ -322,10 +262,8 @@
         trackCodeCopy();
     }
 </script>
-{% endif %}
 
 <!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
 <script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
 {% endif %}
 
@@ -345,11 +283,6 @@
       s.parentNode.insertBefore(hm, s);
     })();
 </script>
-{% endif %}
-
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
 {% endif %}
 
 
@@ -399,11 +332,6 @@
         });
     });
 </script>
-{% endif %}
-
-<!-- 技术博客增强分析 -->
-{% if site.ga_track_id %}
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
 {% endif %}
 
 <script src="{{ "/static/js/sweetHeart.js " | prepend: site.baseurl }}"></script>
