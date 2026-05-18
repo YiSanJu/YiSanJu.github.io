@@ -280,3 +280,26 @@ body.dark-mode .intro-header .container {
 .site-heading .subheading {
   opacity: 0;
 }
+
+/* ============ 文章卡片去除点击聚焦边框 ============ */
+/* 点击或鼠标聚焦时不显示浏览器默认轮廓/虚线框 */
+.post-preview a,
+.post-preview a:focus,
+.post-preview a:active,
+.post-preview a *,
+.post-preview a *:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 仅在键盘 Tab 聚焦时保留可访问性轮廓（鼠标点击不会触发） */
+.post-preview a:focus-visible {
+  outline: 2px solid rgba(0, 133, 161, 0.5);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+body.dark-mode .post-preview a:focus-visible {
+  outline-color: var(--accent-color, rgba(0, 133, 161, 0.6));
+}
