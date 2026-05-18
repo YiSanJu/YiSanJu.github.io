@@ -1,7 +1,7 @@
 # Site settings
 title: SanJu   #你博客的标题
 SEOTitle: 三句的信使 | SanJu #显示在浏览器上搜索的时候显示的标题
-header-img: static/img/main.jpg #显示在首页的背景图片
+header-img: static/img/home-bg.jpg #显示在首页的背景图片
 email: 1307022894@qq.com
 description: "A blog for Sanju." #网站介绍
 keyword: "SanJu,blog,个人记录"
@@ -34,7 +34,7 @@ github_username: YiSanJu
 # 使用rouge作为代码高亮工具,因为从2016年起GitHub Pages不再支持pygments
 permalink: pretty  # 生成优雅的URL
 paginate: 10      # 每页显示的文章数量
-exclude: ["static/less","node_modules","Gruntfile.js","package.json","package-lock.json","README.md","codecov.yml","LICENSE","scripts"]  # 构建时排除的文件
+exclude: ["static/less","node_modules","Gruntfile.js","package.json","package-lock.json","README.md","codecov.yml","LICENSE","scripts",".env",".gitignore"]  # 构建时排除的文件
 anchorjs: true    # 是否启用锚点功能,可在post.html的181行自定义
 
 
@@ -60,7 +60,7 @@ kramdown:
 # 评论系统
 # Gitalk 配置
 gitalk:
-  enable: true  # 是否启用 Gitalk
+  enable: false  # 是否启用 Gitalk
   clientID: 'Ov23liiMDRLuETjKyCjG'  # 你的 GitHub Application Client ID
   clientSecret: 'c7a769c9d46f386f4c833155fd7ba5d0e8cfbd74'  # 你的 GitHub Application Client Secret
   repo: 'YiSanJu.github.io'  # 仓库名称
@@ -71,7 +71,7 @@ gitalk:
   labels: ['Gitalk', 'blog-comment']  # 评论标签，用于在 GitHub Issues 中分类管理
   pagerDirection: 'last'  # 评论排序方向：last(最新在前) 或 first(最旧在前)
   createIssueManually: false  # 自动为每篇文章创建 Issue，推荐设置为 false
-  # proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'  # 代理服务器（如遇到跨域问题可启用）
+  proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'  # 解决跨域问题的代理服务器
   perPage: 10  # 每页显示的评论数量
   maxCommentHeight: 250  # 评论框最大高度（像素）
 
@@ -95,7 +95,7 @@ chrome-tab-theme-color: "#000000"  # Chrome 标签主题色
 service-worker: true  # 是否启用 Service Worker
 
 # 随机背景图片
-random-header-bg: true  # 是否启用随机背景图片（使用 Picsum 在线图片）
+random-header-bg: false  # 是否启用随机背景图片（使用 Picsum 在线图片）
 
 # Personal 页面开关
 personal_page: true  # 是否显示 Personal 页面（个人生活记录）

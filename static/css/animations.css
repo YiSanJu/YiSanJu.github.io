@@ -1,0 +1,282 @@
+/**
+ * 滚动动画 & 微交互样式
+ */
+
+/* ============ 滚动渐入动画 ============ */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ 导航栏收缩效果 ============ */
+.navbar-custom {
+  transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-custom.navbar-shrink {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .navbar-custom.navbar-shrink {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* ============ 回到顶部按钮 ============ */
+.back-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #0085a1;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 9998;
+  box-shadow: 0 2px 10px rgba(0,133,161,0.3);
+}
+
+.back-to-top--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #006b82;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0,133,161,0.4);
+}
+
+body.dark-mode .back-to-top {
+  background: var(--accent-color);
+  box-shadow: 0 2px 10px rgba(0,210,255,0.3);
+}
+
+body.dark-mode .back-to-top:hover {
+  box-shadow: 0 4px 15px rgba(0,210,255,0.4);
+}
+
+/* ============ 链接悬停效果 ============ */
+.post-preview a .post-title {
+  transition: color 0.3s ease;
+}
+
+.post-preview a:hover .post-title {
+  color: #0085a1;
+}
+
+body.dark-mode .post-preview a:hover .post-title {
+  color: var(--accent-color);
+}
+
+/* ============ 卡片悬停效果增强 ============ */
+.hobby-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* ============ 技能标签悬停 ============ */
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-category h4 {
+  font-size: 15px;
+  color: #555;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+body.dark-mode .skill-category h4 {
+  color: #bbb;
+}
+
+.skill-tag {
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-tag.highlight {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: #fff !important;
+  border-color: transparent;
+  font-weight: 500;
+}
+
+body.dark-mode .skill-tag.highlight {
+  background: linear-gradient(135deg, #00d2ff, #7b2ff7);
+  color: #fff !important;
+  border-color: transparent;
+}
+
+.skill-tag:hover {
+  background: #0085a1;
+  color: #fff !important;
+  border-color: #0085a1;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0,133,161,0.2);
+}
+
+.skill-tag.highlight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(17,153,142,0.35);
+}
+
+body.dark-mode .skill-tag:hover {
+  background: var(--accent-color);
+  color: #1a1a2e !important;
+  border-color: var(--accent-color);
+  box-shadow: 0 3px 10px rgba(0,210,255,0.2);
+}
+
+body.dark-mode .skill-tag.highlight:hover {
+  box-shadow: 0 4px 15px rgba(0,210,255,0.35);
+}
+
+/* ============ 时间线动画 ============ */
+.timeline-item {
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(5px);
+}
+
+/* ============ 打字机光标 ============ */
+.intro-header .site-heading .subheading,
+.intro-header .page-heading .subheading {
+  display: inline !important;
+  border-right: none;
+}
+
+.intro-header .site-heading .subheading.typing-active {
+  border-right: 2px solid currentColor;
+  padding-right: 2px;
+  animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  50% { border-color: transparent; }
+}
+
+/* ============ 导航栏去除点击框 ============ */
+.navbar-custom a:focus,
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-brand:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-custom .navbar-nav > li > a:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.5);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ============ Header 背景图优化 ============ */
+.intro-header {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 覆盖原有不均匀的 padding，实现真正垂直居中 */
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+  padding: 120px 0 !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 150px 0 !important;
+  }
+}
+
+/* 暗色模式下加深遮罩，让文字更清晰 */
+body.dark-mode .intro-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+body.dark-mode .intro-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 移动端关闭固定背景（iOS 不支持 + 性能优化） */
+@media (max-width: 768px) {
+  .intro-header {
+    background-attachment: scroll;
+    min-height: 300px;
+  }
+}
+
+/* 大屏幕确保图片不被拉伸 */
+@media (min-width: 2560px) {
+  .intro-header {
+    background-size: cover;
+  }
+}
+
+/* ============ 页面加载动画 ============ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-heading {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.site-heading h1 {
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+/* subheading 由打字机 JS 接管显示，不使用 fadeInUp */
+.site-heading .subheading {
+  opacity: 0;
+}

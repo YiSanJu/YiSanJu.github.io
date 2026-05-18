@@ -113,6 +113,7 @@
                             </a>
                         </li>
                     {% endif %}
+
                 </ul>   
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
@@ -142,7 +143,6 @@
 {% if site.service-worker %}
 <script type="text/javascript">
     if(navigator.serviceWorker){
-        // For security reasons, a service worker can only control the pages that are in the same directory level or below it. That's why we put sw.js at ROOT level.
         navigator.serviceWorker
             .register('/sw.js')
             .then((registration) => {console.log('Service Worker Registered. ', registration)})
@@ -150,6 +150,7 @@
     }
 </script>
 {% endif %}
+
 
 <!-- async load function -->
 <script>
@@ -213,68 +214,19 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
-    // 基础配置
     gtag('config', '{{ site.ga_track_id }}', {
-        // 隐私保护设置
         {% if site.ga_anonymize_ip %}anonymize_ip: true,{% endif %}
         {% if site.ga_respect_dnt %}respect_dnt: true,{% endif %}
-        // 自定义配置
-        send_page_view: true,
-        // 增强的电子商务跟踪（可选）
-        custom_map: {
-            'custom_parameter': 'blog_category'
-        }
+        send_page_view: true
     });
-    
-    // 自定义事件跟踪（用于技术博客分析）
-    // 文章阅读时间跟踪
-    function trackReadingTime() {
-        let startTime = Date.now();
-        window.addEventListener('beforeunload', function() {
-            let readingTime = Math.round((Date.now() - startTime) / 1000);
-            gtag('event', 'reading_time', {
-                'event_category': 'engagement',
-                'event_label': document.title,
-                'value': readingTime
-            });
-        });
-    }
-    
-    // 代码复制跟踪
-    function trackCodeCopy() {
-        document.addEventListener('copy', function() {
-            gtag('event', 'code_copy', {
-                'event_category': 'engagement',
-                'event_label': document.title
-            });
-        });
-    }
-    
-    // 初始化自定义跟踪
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-            trackReadingTime();
-            trackCodeCopy();
-        });
-    } else {
-        trackReadingTime();
-        trackCodeCopy();
-    }
 </script>
-
-<!-- 技术博客增强分析 -->
-<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
 {% endif %}
 
 
 <!-- Baidu Tongji -->
 {% if site.ba_track_id %}
 <script>
-    // dynamic User by Hux
     var _baId = '{{ site.ba_track_id }}';
-
-    // Originial
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -362,3 +314,20 @@
 
 <!-- 随机背景图片 -->
 <script src="{{ "/static/js/randomBg.js" | prepend: site.baseurl }}"></script>
+
+<!-- 暗色模式切换 -->
+<script src="{{ "/static/js/dark-mode.js" | prepend: site.baseurl }}"></script>
+
+<!-- 滚动动画与微交互 -->
+<script src="{{ "/static/js/animations.js" | prepend: site.baseurl }}"></script>
+
+<!-- GitHub 活动与技能雷达图 -->
+<script src="{{ "/static/js/github-activity.js" | prepend: site.baseurl }}"></script>
+
+<!-- AI 聊天组件 -->
+<script src="{{ "/static/js/ai-chat.js" | prepend: site.baseurl }}"></script>
+
+<!-- 技术博客增强分析 -->
+{% if site.ga_track_id %}
+<script src="{{ '/static/js/blog-analytics.js' | prepend: site.baseurl }}"></script>
+{% endif %}

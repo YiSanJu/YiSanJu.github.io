@@ -1,0 +1,283 @@
+/**
+ * 暗色模式样式
+ * 通过 body.dark-mode 类切换
+ */
+
+/* 暗色模式变量 */
+body.dark-mode {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-card: #0f3460;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --border-color: #2a2a4a;
+  --accent-color: #00d2ff;
+  --code-bg: #1e1e2e;
+}
+
+/* 基础背景和文字 */
+body.dark-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body.dark-mode .container {
+  color: var(--text-primary);
+}
+
+/* 导航栏 */
+body.dark-mode .navbar-custom {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+body.dark-mode .navbar-custom .navbar-brand,
+body.dark-mode .navbar-custom .nav li a {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .navbar-custom .nav li a:hover {
+  color: var(--accent-color) !important;
+}
+
+/* 页脚 */
+body.dark-mode footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+body.dark-mode footer .copyright {
+  color: var(--text-secondary);
+}
+
+/* 文章列表 */
+body.dark-mode .post-preview {
+  border-bottom-color: var(--border-color);
+}
+
+body.dark-mode .post-preview .post-title,
+body.dark-mode .post-preview .post-subtitle {
+  color: var(--text-primary);
+}
+
+body.dark-mode .post-preview .post-content-preview {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .post-meta {
+  color: var(--text-secondary);
+}
+
+body.dark-mode hr {
+  border-color: var(--border-color);
+}
+
+/* 侧边栏 */
+body.dark-mode .sidebar-container {
+  color: var(--text-primary);
+}
+
+body.dark-mode .sidebar-container h5 a {
+  color: var(--text-primary);
+}
+
+body.dark-mode .short-about p {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .tags a {
+  color: var(--accent-color);
+}
+
+/* 文章内容 */
+body.dark-mode .post-container {
+  color: var(--text-primary);
+}
+
+body.dark-mode .post-container h1,
+body.dark-mode .post-container h2,
+body.dark-mode .post-container h3,
+body.dark-mode .post-container h4 {
+  color: var(--text-primary);
+}
+
+body.dark-mode .post-container a {
+  color: var(--accent-color);
+}
+
+body.dark-mode .post-container blockquote {
+  background-color: var(--bg-secondary);
+  border-left-color: var(--accent-color);
+  color: var(--text-secondary);
+}
+
+body.dark-mode .post-container table th {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+body.dark-mode .post-container table td {
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+body.dark-mode .post-container table tr:hover {
+  background-color: var(--bg-secondary);
+}
+
+body.dark-mode .post-container img {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* 代码块 */
+body.dark-mode .post-container code.language-plaintext {
+  background-color: var(--bg-secondary);
+  color: var(--accent-color);
+}
+
+/* About 页面 */
+body.dark-mode .about-section h2 {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-color);
+}
+
+body.dark-mode .timeline-item::before {
+  background: var(--accent-color);
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+body.dark-mode .timeline::before {
+  background: var(--border-color);
+}
+
+body.dark-mode .timeline-title {
+  color: var(--text-primary);
+}
+
+body.dark-mode .timeline-date {
+  color: var(--accent-color);
+}
+
+body.dark-mode .timeline-company {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .timeline-desc {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .skill-tag {
+  background: var(--bg-secondary);
+  color: var(--accent-color);
+  border-color: var(--border-color);
+}
+
+body.dark-mode .contact-list a {
+  color: var(--accent-color);
+}
+
+/* Personal 页面 */
+body.dark-mode .personal-section h2 {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-color);
+}
+
+body.dark-mode .hobby-card {
+  background: var(--bg-secondary);
+}
+
+body.dark-mode .hobby-card:hover {
+  box-shadow: 0 5px 20px rgba(0,210,255,0.1);
+}
+
+body.dark-mode .hobby-name {
+  color: var(--text-primary);
+}
+
+body.dark-mode .hobby-desc {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .essay-item {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+body.dark-mode .essay-item:hover {
+  box-shadow: 0 3px 15px rgba(0,210,255,0.08);
+}
+
+body.dark-mode .essay-date {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .essay-content {
+  color: var(--text-secondary);
+}
+
+/* 翻页器 */
+body.dark-mode .pager li > a {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+body.dark-mode .pager li > a:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* 暗色模式切换按钮 */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+body.dark-mode .dark-mode-toggle {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+}
+
+/* 过渡动画 */
+body,
+body .navbar-custom,
+body .post-preview .post-title,
+body .post-preview .post-subtitle,
+body .post-preview .post-content-preview,
+body .post-meta,
+body .sidebar-container,
+body footer,
+body .post-container,
+body .hobby-card,
+body .essay-item,
+body .skill-tag {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

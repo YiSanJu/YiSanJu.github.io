@@ -18,11 +18,12 @@
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="{{ site.baseurl }}/">Home</a>
+                        <a href="{{ site.baseurl }}/">首页</a>
                     </li>
-                    {% for page in site.pages %}{% if page.title %}
+                    {% assign sorted_pages = site.pages | sort: "nav_order" %}
+                    {% for page in sorted_pages %}{% if page.nav_title %}
                     <li>
-                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.nav_title }}</a>
                     </li>
                     {% endif %}{% endfor %}
                     <!-- <li>

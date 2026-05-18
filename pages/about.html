@@ -1,8 +1,10 @@
 ---
 layout: page
-title: "About Me"
-description: "Hey, this is Sanju."
-header-img: "static/img/about.jpg"
+title: "履历"
+nav_title: "履历"
+nav_order: 2
+description: "一路走来的技术成长轨迹"
+header-img: "static/img/about-bg.jpg"
 permalink: /about/
 ---
 
@@ -147,8 +149,8 @@ permalink: /about/
     <!-- 关于我 -->
     <div class="about-section">
         <h2>👋 关于我</h2>
-        <p>你好，我是 <strong>SanJu</strong>，一名专注于 Web 前端领域的软件工程师，目前就职于腾讯，负责腾讯文档 Slide 模块的研发工作。</p>
-        <p>拥有 4 年以上前端开发经验，熟悉 Vue、React 等主流框架，对前端工程化、性能优化、复杂交互场景有深入理解与实践。善于将业务需求转化为高质量的技术方案，注重代码可维护性与团队协作效率。</p>
+        <p>你好，我是 <strong>SanJu</strong>，一名专注于在线文档领域的前端工程师，目前就职于腾讯旗下腾娱子公司，负责腾讯文档 Slide（演示文稿）模块的研发工作。</p>
+        <p>日常深耕文档/PPT 方向的复杂渲染与交互实现，同时在多端开发（Web、小程序、桌面端）和 AI 能力集成方面持续探索与落地。拥有 5 年以上前端开发经验，对 Canvas 渲染、前端工程化、性能优化有深入实践。</p>
         <p>本博客用于沉淀技术思考、记录解决方案，同时也作为个人成长的复盘载体。如有技术交流或合作意向，欢迎联系。</p>
     </div>
 
@@ -157,7 +159,7 @@ permalink: /about/
         <h2>💼 工作履历</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <div class="timeline-date">2023.06 - 至今</div>
+                <div class="timeline-date">2023.03 - 至今</div>
                 <div class="timeline-title">高级前端开发工程师</div>
                 <div class="timeline-company">腾讯科技（深圳）有限公司</div>
                 <div class="timeline-desc">
@@ -169,14 +171,14 @@ permalink: /about/
                 </div>
             </div>
             <div class="timeline-item">
-                <div class="timeline-date">2021.07 - 2023.05</div>
+                <div class="timeline-date">2021.03 - 2023.10</div>
                 <div class="timeline-title">前端开发工程师</div>
-                <div class="timeline-company">某互联网公司</div>
+                <div class="timeline-company">宇视科技有限公司</div>
                 <div class="timeline-desc">
                     <ul>
-                        <li>负责公司核心产品的前端开发</li>
-                        <li>参与移动端 H5 页面开发与优化</li>
-                        <li>协助制定前端开发规范</li>
+                        <li>负责公司核心产品（NVR/IPC）的前端开发</li>
+                        <li>参与web/移动端/小程序端 H5 页面开发与优化</li>
+                        <li>协助制定前端开发规范与wasm技术研究</li>
                     </ul>
                 </div>
             </div>
@@ -186,29 +188,56 @@ permalink: /about/
     <!-- 技术栈 -->
     <div class="about-section">
         <h2>🛠 技术栈</h2>
-        <div class="skill-tags">
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">Vue.js</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Webpack</span>
-            <span class="skill-tag">Vite</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">Canvas</span>
-            <span class="skill-tag">Git</span>
+        <div class="skill-category">
+            <h4>📄 文档 & 渲染</h4>
+            <div class="skill-tags">
+                <span class="skill-tag highlight">Canvas</span>
+                <span class="skill-tag highlight">WebGL</span>
+                <span class="skill-tag highlight">PPT/Slide 渲染</span>
+                <span class="skill-tag">SVG</span>
+                <span class="skill-tag">富文本编辑</span>
+            </div>
         </div>
+        <div class="skill-category">
+            <h4>🤖 AI & 智能化</h4>
+            <div class="skill-tags">
+                <span class="skill-tag highlight">LLM 应用开发</span>
+                <span class="skill-tag highlight">AI Agent</span>
+                <span class="skill-tag">Prompt Engineering</span>
+                <span class="skill-tag">RAG</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <h4>🖥 前端工程</h4>
+            <div class="skill-tags">
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Vue.js</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Webpack/Vite</span>
+                <span class="skill-tag">多端开发</span>
+            </div>
+        </div>
+        <!-- 技能雷达图 -->
+        <div id="skill-radar" style="margin-top: 30px;"></div>
     </div>
+
+    <!-- GitHub 活动 -->
+    <!-- <div class="about-section">
+        <h2>🐙 GitHub 活动</h2>
+        <div id="github-activity">
+            <p style="color:#999;text-align:center;">正在加载 GitHub 数据...</p>
+        </div>
+    </div> -->
 
     <!-- 教育背景 -->
     <div class="about-section">
         <h2>🎓 教育背景</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <div class="timeline-date">2017.09 - 2021.06</div>
-                <div class="timeline-title">计算机科学与技术</div>
-                <div class="timeline-company">本科</div>
+                <div class="timeline-date">2016.09 - 2020.06</div>
+                <div class="timeline-title">中南民族大学</div>
+                <div class="timeline-company">软件工程 · 工学学士</div>
             </div>
         </div>
     </div>

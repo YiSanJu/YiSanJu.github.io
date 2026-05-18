@@ -1,69 +1,26 @@
-# ============================================
-# Jekyll 项目 Git 忽略配置
-# ============================================
-
-# Jekyll 生成的站点文件
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-
-# Bundler 依赖
-.bundle/
-vendor/
-
-# Ruby 相关
-*.gem
-*.rbc
-/.config
-/coverage/
-/InstalledFiles
-/pkg/
-/spec/reports/
-/spec/examples.txt
-/test/tmp/
-/test/version_tmp/
-/tmp/
-
-# Node.js 相关
+# Dependencies
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-yarn.lock
+_site/
 
-# IDE 和编辑器
+# Environment variables (API Keys)
+.env
+.env.local
+.env.production
+
+# IDE
 .idea/
 .vscode/
 *.swp
 *.swo
-*~
-.DS_Store
-*.sublime-project
-*.sublime-workspace
 
-# 操作系统文件
+# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# 日志文件
-*.log
+# Build
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
-# 临时文件
-*.tmp
-*.temp
-
-# 本地配置文件（包含敏感信息）
-_config.local.yml
-.env
-.env.local
-
-# 备份文件
-*.bak
-*.backup
+# Cloudflare Worker secrets
+scripts/ai-chat-worker/.dev.vars

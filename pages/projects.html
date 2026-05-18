@@ -1,0 +1,346 @@
+---
+layout: page
+title: "项目"
+nav_title: "项目"
+nav_order: 1
+description: "代码构筑的作品集，每一个项目都是一次实践"
+header-img: "static/img/projects-bg.jpg"
+permalink: /projects/
+---
+
+<style>
+.projects-intro {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.projects-intro h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #fff;
+}
+.projects-intro p {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(255,255,255,0.95);
+}
+.projects-section {
+  margin-bottom: 40px;
+}
+.projects-section h2 {
+  color: #333;
+  border-bottom: 2px solid #4facfe;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.project-card:hover::before {
+  opacity: 1;
+}
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.project-card-icon {
+  font-size: 28px;
+}
+.project-card-links {
+  display: flex;
+  gap: 10px;
+}
+.project-card-links a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+.project-card-links a:hover {
+  color: #4facfe;
+  border-color: #4facfe;
+  background: rgba(79,172,254,0.05);
+}
+.project-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+.project-card-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.project-card-tag {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: #f0f7ff;
+  color: #4facfe;
+  border: 1px solid #cce5ff;
+}
+.project-card-status {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.status-active {
+  background: #e6f9e6;
+  color: #22863a;
+}
+.status-wip {
+  background: #fff3e0;
+  color: #e65100;
+}
+.status-archived {
+  background: #f5f5f5;
+  color: #666;
+}
+
+/* AI 实验区 */
+.ai-experiments {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 30px;
+  color: white;
+}
+.ai-experiments h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.ai-experiment-item {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.ai-experiment-item:last-child {
+  margin-bottom: 0;
+}
+.ai-experiment-item:hover {
+  transform: translateX(5px);
+  background: rgba(255,255,255,0.15);
+}
+.ai-experiment-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.ai-experiment-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+}
+.ai-experiment-tech {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* 暗色模式适配 */
+body.dark-mode .projects-section h2 {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-color);
+}
+body.dark-mode .project-card {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+body.dark-mode .project-card:hover {
+  box-shadow: 0 10px 30px rgba(0,210,255,0.1);
+}
+body.dark-mode .project-card-title {
+  color: var(--text-primary);
+}
+body.dark-mode .project-card-desc {
+  color: var(--text-secondary);
+}
+body.dark-mode .project-card-links a {
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+body.dark-mode .project-card-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+body.dark-mode .project-card-tag {
+  background: rgba(0,210,255,0.1);
+  color: var(--accent-color);
+  border-color: rgba(0,210,255,0.3);
+}
+
+@media (max-width: 576px) {
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<!-- 页面介绍 -->
+<div class="projects-intro">
+    <h3>🚀 我的项目</h3>
+    <p>开源贡献、个人项目与 AI 技术实验</p>
+</div>
+
+<div class="zh post-container">
+    
+    <!-- 主要项目 -->
+    <div class="projects-section">
+        <h2>📦 开源项目</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="project-card-icon">🎨</span>
+                    <div class="project-card-links">
+                        <a href="https://github.com/YiSanJu/YiSanJu.github.io" target="_blank">GitHub</a>
+                        <a href="https://yisanju.github.io" target="_blank">Demo</a>
+                    </div>
+                </div>
+                <div class="project-card-title">个人博客</div>
+                <div class="project-card-desc">基于 Jekyll + GitHub Pages 的个人技术博客，支持 PWA、暗色模式、滚动动画等现代特性。</div>
+                <div class="project-card-tags">
+                    <span class="project-card-tag">Jekyll</span>
+                    <span class="project-card-tag">GitHub Pages</span>
+                    <span class="project-card-tag">PWA</span>
+                    <span class="project-card-tag">CSS3</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="project-card-icon">✈️</span>
+                    <div class="project-card-links">
+                        <a href="https://github.com/YiSanJu/hello-agents" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card-title">XiaoJu 旅游助手</div>
+                <div class="project-card-desc">基于多 Agent 协作的智能旅行规划应用，输入目的地即可自动生成完整行程，包含天气、景点、酒店、预算等。</div>
+                <div class="project-card-tags">
+                    <span class="project-card-tag">Vue 3</span>
+                    <span class="project-card-tag">FastAPI</span>
+                    <span class="project-card-tag">Multi-Agent</span>
+                    <span class="project-card-tag">LLM</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="project-card-icon">🛠️</span>
+                    <div class="project-card-links">
+                        <a href="https://github.com/YiSanJu" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card-title">博客发布工具链</div>
+                <div class="project-card-desc">自动化博客发布脚本，支持 Markdown 解析、图片处理、自动部署到 GitHub Pages。</div>
+                <div class="project-card-tags">
+                    <span class="project-card-tag">Node.js</span>
+                    <span class="project-card-tag">自动化</span>
+                    <span class="project-card-tag">Markdown</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI 实验 -->
+    <div class="projects-section">
+        <h2>🤖 AI 实验</h2>
+        <div class="ai-experiments">
+            <h3>探索 AI + 前端的无限可能</h3>
+            
+            <div class="ai-experiment-item">
+                <div class="ai-experiment-title">💬 AI 个人助手</div>
+                <div class="ai-experiment-desc">
+                    基于 RAG 的个人知识库聊天机器人，用我的博客文章和技术笔记作为数据源，访客可以直接"和我对话"。
+                </div>
+                <div class="ai-experiment-tech">Tech: Cloudflare Workers + OpenAI API + Embeddings</div>
+            </div>
+            
+            <div class="ai-experiment-item">
+                <div class="ai-experiment-title">✈️ XiaoJu 智能旅行助手</div>
+                <div class="ai-experiment-desc">
+                    多 Agent 协作的旅行规划应用：天气 Agent 查天气、搜索 Agent 找景点酒店、规划 Agent 整合生成完整行程。双模型 Fallback 机制保障可用性。
+                </div>
+                <div class="ai-experiment-tech">Tech: FastAPI + Vue 3 + Qwen2.5-72B + DeepSeek + Tavily API + Multi-Agent</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 技术文章精选 -->
+    <div class="projects-section">
+        <h2>📝 技术文章精选</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="project-card-icon">📄</span>
+                    <span class="project-card-status status-active">已发布</span>
+                </div>
+                <div class="project-card-title">Slide 文字竖排实现</div>
+                <div class="project-card-desc">深入解析腾讯文档 Slide 中文字竖排渲染的技术实现，包括 OOXML 格式解析和 Canvas 渲染。</div>
+                <div class="project-card-tags">
+                    <span class="project-card-tag">Canvas</span>
+                    <span class="project-card-tag">排版</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="project-card-icon">📄</span>
+                    <span class="project-card-status status-wip">撰写中</span>
+                </div>
+                <div class="project-card-title">AI 辅助前端开发实践</div>
+                <div class="project-card-desc">如何利用 AI 工具提升前端开发效率，包括代码生成、代码审查、文档编写等场景。</div>
+                <div class="project-card-tags">
+                    <span class="project-card-tag">AI</span>
+                    <span class="project-card-tag">效率</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

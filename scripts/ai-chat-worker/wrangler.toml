@@ -1,0 +1,9 @@
+name = "ai-chat-sanju"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://yisanju.github.io"
+
+# API Key 通过 wrangler secret put OPENAI_API_KEY 设置
+# 不要在这里直接写明文 Key！
